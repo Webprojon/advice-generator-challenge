@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+/* VARIABLES */
+:root {
+  /* Colors */
+  --body-bg: hsl(218, 23%, 16%);
+  --card-bg: hsl(217, 19%, 24%);
+  --text-color: hsl(193, 38%, 86%);
+  --text-color-green: hsl(150, 100%, 66%);
+  --trans: all 0.2s linear;
+
+  /*
+- Grayish Blue: hsl(217, 19%, 38%)
+  */
+
+  /* Fonts */
+  --body-font-family: "Manrope", sans-serif;
+  --font-weight-800: 800;
+}
+
+/* GENERAL CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: var(--body-font-family);
+  font-weight: var(--font-weight-800);
+}
+
+.advice__component {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 1.6rem;
+  width: 30rem;
+  height: 20rem;
+  background-color: var(--card-bg);
+  border-radius: 0.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.advice__id {
+  color: var(--text-color-green);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 0.8rem;
+}
+
+.advice {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  padding-top: 1.6rem;
+}
+
+.line {
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.random__advice {
+  position: absolute;
+  bottom: -8%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.4rem;
+  height: 3.4rem;
+  background-color: var(--text-color-green);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.random__advice:active {
+  transition: var(--trans);
+  box-shadow: 0 0 15px 5px hsl(150, 100%, 66%);
+}
+
+/* QUERY */
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
